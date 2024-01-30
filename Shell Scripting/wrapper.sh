@@ -6,6 +6,7 @@ echo -e "\e[33m Enter your group name: \e[0m"
 read gname
 
 if [ $?=0 ]; then
+    groupadd $gname
     useradd -G $gname $name
     echo -e "\e[36m User $name has been added"
 else
